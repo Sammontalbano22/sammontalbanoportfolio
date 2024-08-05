@@ -418,6 +418,7 @@ nav ul li a:hover::after {
 }
 
 /* Button Styles */
+
 .btn {
     display: block;
     margin: 50px auto;
@@ -429,17 +430,17 @@ nav ul li a:hover::after {
     color: rgb(244, 237, 237);
     transition: background 0.5s;
 }
-.btn .btn3{
-    color: #007BFF;
+
+.btn:hover {
+    background: #ff004f;
 }
 /* Contact Form Container */
 .contact-container {
-    background-color: #727272;
     padding: 30px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     width: 100%;
-    max-width: 500px;
+    max-width: 2000px;
     box-sizing: border-box;
 }
 
@@ -447,10 +448,6 @@ nav ul li a:hover::after {
 .contact-form h1 {
     text-align: center;
     margin-bottom: 20px;
-}
-
-.contact-form button{
-    color: #080808;
 }
 .input-group {
     margin-bottom: 20px;
@@ -495,7 +492,7 @@ nav ul li a:hover::after {
 }
 
 .wrapper .static-txt {
-    color: #fff;
+    /* color: #fff; */
     font-size: 60px;
     margin-top: 285px;
     font-size: 75px;
@@ -653,8 +650,8 @@ nav .fa-solid {
         flex-basis: 100%;
     }
 }
-
+/* 
 #msg {
     color: #f7f4f5;
     margin-top: -10px;
-}
+} */
