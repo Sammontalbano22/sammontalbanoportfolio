@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <!-- Load Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap&subset=cyrillic" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/f94f698d18.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="Images/Screenshot 2023-02-15 202837.png" type="image/x-icon">
+    <!-- <style>
+        .contact-left {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        } -->
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Images/Screenshot 2023-02-15 202837.png" class="logo" href="#header">
+                <ul id="sidemenu">
+                    <li><a href="#header">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#portfolio">PORTFOLIO</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <i class="fa-solid fa-x" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="wrapper">
+                <div class="static-txt">I am</div>
+                <ul class="dynamic-txts">
+                    <li><span>a Computer Science Student</span></li>
+                    <li><span>a Designer</span></li>
+                    <li><span>a Developer</span></li>
+                    <li><span>a Space Enthusiast</span></li>
+                </ul>
+            </div>
+            <div class="main-name">
+                <p>Sam Montalbano</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <!-- About Column 1 -->
+                <div class="about-col-1">
+                    <div class="front">
+                        <div class="tooltip-text">Hover over the image below to learn more about me!</div>
+                        <img src="Images/about.jpg" alt="About Me">
+                    </div>
+                    <div class="back">
+                        <h1 class="sub-title">
+                            <div class="AboutMe">About Me<br><br>
+                                <p>I'm a student at the University of Denver with a goal to use my passion for technology and aerospace as an aid to leave the world better than I found it. In my free time I love to fish, hike, golf, build, and fly model rockets.</p>
+                            </div>
+                        </h1>
+                    </div>
+                </div>
+
+                <!-- About Column 2 -->
+                <div class="about-col-2">
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Adobe Suite</span></li>
+                            <li>Proficient in Lightroom, Photoshop, Premiere Pro, Fresco, and others.</li><br>
+                            <li><span>Microsoft Office and Google Workspace</span></li>
+                            <li>Proficiency in all major applications for both Microsoft and Google.</li><br>
+                            <li><span>Computer Languages</span></li>
+                            <li>Knowledgeable in Python, Arduino C, and C++. </li><br>
+                            <li><span>Web Development</span></li>
+                            <li>Foundation in Front End Web Development and Design.</li>
+                            <li><span>Data Structures and Algorithms</span></li>
+                            <li>Understanding of core Data Structures and Algorithms.</li>
+                            <li><span>Soft Skills</span></li>
+                            <li>Strong writer, speaker, communicator, leader, and learner.</li>
+                            <li><span>3d modeling and printing</span></li>
+                            <li>Foundational Knowledge of Blender, Solidworks, and 3d printing.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Executive Assistant at Breezy Strategies</span></li>
+                            <li>January 2023-Present</li>
+                            <p>
+                                • Organize company produced documents<br>
+                                • Create agendas for S-CAP monthly reviews<br>
+                                • Secure and curate Google Drive and Excel folders<br>
+                                • Efficiently communicated with multiple stakeholders
+                            </p>
+                            <li><span>Trails Accessibility Technician at La Veta Trails</span></li>
+                            <li>Contracted June 2022- September 2022</li>
+                            <p>
+                                • Developed report of suggestions on increasing disability access on laboratory Trail in La Veta.<br>
+                                • Implemented the use of GAIA GPS for terra-mapping of tree and wind damage on Huerfano County Trails.<br>
+                                • Presented findings at monthly La Veta Trails Board meetings.<br>
+                            </p>
+                            <li><span>Intern at Huerfano County Courts</span></li>
+                            <li>September 2022- May 2022</li>
+                            <p>
+                                • Assisted District Judge and Court Reporter.<br>
+                                • Performed a variety of secretarial tasks within clerk offices.<br>
+                                • Processed and reviewed official documents.<br>
+                            </p>
+                            <li><span>Drone and I.T. Technician at La Veta School District</span></li>
+                            <li>September 2022- May 2022</li>
+                            <p>
+                                • Filmed, edited, and uploaded drone footage of La Veta Schools’ facilities.<br>
+                                • Provided drone footage for use in grant applications.<br>
+                                • Developed blueprint and masterplan for website.<br>
+                            </p>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Bachelors in Computer Science and Mathematics</span><br>University of Denver | 2026 | 3.6 GPA</li><br>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Section -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Portfolio</h1>
+            <div class="work-list">
+                <div class="work">
+                    <video width="100%" controls autoplay loop muted>
+                        <source src="use.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="layer">
+                        <h3>Fire Percolation</h3>
+                        <p>Utilizes Stacks and Queues to predict fire behavior based on percolation principles.</p>
+                        <a href="https://github.com/Sammontalbano22/PythonProjects/blob/main/Percolation.py"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <video width="100%" controls autoplay loop muted>
+                        <source src="portproj2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="layer">
+                        <h3>Sand Game</h3>
+                        <p>Utilizes University Game Engine to emulate Sand and Water.</p>
+                        <a href="https://github.com/Sammontalbano22/PythonProjects/blob/main/Sand_game_emulator.py"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <video width="100%" height="100%" autoplay loop muted>
+                        <source src="portproj3.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="layer">
+                        <h3>Colorado Elevation Map</h3>
+                        <p>Reads file and turns elevation data into topographical map of Colorado.</p>
+                        <a href="https://github.com/Sammontalbano22/PythonProjects/blob/main/montalbano_project9.py"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <video width="100%" controls autoplay loop muted>
+                        <source src="useforport4.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="layer">
+                        <h3>Shell Terminal Simulator</h3>
+                        <p>This program implements tree Data Structures to create a shell terminal.</p>
+                        <a href="https://github.com/Sammontalbano22/PythonProjects/blob/main/shellterminal.py"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="https://github.com/Sammontalbano22/PythonProjects/tree/main" download class="btn">My Project Repositories</a>
+        </div>
+    </div>
+    <!-- Contact Section -->
+    <div id="contact">
+        <h1 class="sub-title">Contact Me</h1>
+        <div class="contact-container">
+            <form action="submit_form.php" method="POST" class="contact-form">
+                <div class="input-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="input-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+
+
+</body>
+</html>
