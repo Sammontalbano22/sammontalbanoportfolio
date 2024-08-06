@@ -416,6 +416,35 @@ nav ul li a:hover::after {
 .work:hover .layer {
     height: 100%;
 }
+/* Blog Section */
+#blog {
+    padding: 50px 0;
+    background: #f7f7f7;
+}
+
+#blog .container {
+    text-align: center;
+}
+
+#blog h1.sub-title {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 50px;
+}
+
+#blog .blog-post {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#blog .blog-post iframe {
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    max-width:2000px;
+    height: 1000px;
+}
 
 /* Button Styles */
 
