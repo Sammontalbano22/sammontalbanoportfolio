@@ -223,14 +223,16 @@ for (let i = 0; i < 100; i++) {
 }
 
   
-
-  // Draw Rocket
-  function drawRocket() {
+function drawRocket() {
   gameCtx.save();
   gameCtx.translate(rocket.x + rocket.w / 2, rocket.y + rocket.h / 2);
 
-  // Rocket Body
-  gameCtx.fillStyle = "#FFD700"; // bright yellow
+  // === Rocket Body with Gradient ===
+  const bodyGradient = gameCtx.createLinearGradient(0, -rocket.h / 2, 0, rocket.h / 2);
+  bodyGradient.addColorStop(0, "#FFFACD"); // light yellow top
+  bodyGradient.addColorStop(1, "#FFD700"); // gold bottom
+
+  gameCtx.fillStyle = bodyGradient;
   gameCtx.beginPath();
   gameCtx.moveTo(-rocket.w / 2, -rocket.h / 2);
   gameCtx.lineTo(rocket.w / 2, -rocket.h / 2);
@@ -239,8 +241,12 @@ for (let i = 0; i < 100; i++) {
   gameCtx.closePath();
   gameCtx.fill();
 
-  // Nose Cone
-  gameCtx.fillStyle = "#FF4500"; // orange-red
+  // === Nose Cone ===
+  const coneGradient = gameCtx.createLinearGradient(0, -rocket.h, 0, -rocket.h / 2);
+  coneGradient.addColorStop(0, "#FF6347"); // tomato red
+  coneGradient.addColorStop(1, "#FF4500"); // darker red
+
+  gameCtx.fillStyle = coneGradient;
   gameCtx.beginPath();
   gameCtx.moveTo(-rocket.w / 2, -rocket.h / 2);
   gameCtx.lineTo(0, -rocket.h);
@@ -248,36 +254,52 @@ for (let i = 0; i < 100; i++) {
   gameCtx.closePath();
   gameCtx.fill();
 
-  // Side Fins
-  gameCtx.fillStyle = "#FF6347"; // tomato red
+  // === Side Fins ===
+  gameCtx.fillStyle = "#DC143C"; // crimson
   gameCtx.beginPath(); // left fin
   gameCtx.moveTo(-rocket.w / 2, rocket.h / 2);
-  gameCtx.lineTo(-rocket.w / 1.2, rocket.h / 1.8);
-  gameCtx.lineTo(-rocket.w / 2, rocket.h / 3);
+  gameCtx.lineTo(-rocket.w * 0.75, rocket.h * 0.4);
+  gameCtx.lineTo(-rocket.w / 2, rocket.h * 0.25);
   gameCtx.closePath();
   gameCtx.fill();
 
   gameCtx.beginPath(); // right fin
   gameCtx.moveTo(rocket.w / 2, rocket.h / 2);
-  gameCtx.lineTo(rocket.w / 1.2, rocket.h / 1.8);
-  gameCtx.lineTo(rocket.w / 2, rocket.h / 3);
+  gameCtx.lineTo(rocket.w * 0.75, rocket.h * 0.4);
+  gameCtx.lineTo(rocket.w / 2, rocket.h * 0.25);
   gameCtx.closePath();
   gameCtx.fill();
 
-  // Window
-  gameCtx.fillStyle = "#87CEEB"; // sky blue
+  // === Window with Shadow ===
+  gameCtx.fillStyle = "#87CEEB";
   gameCtx.beginPath();
   gameCtx.arc(0, -rocket.h / 3, rocket.w / 4, 0, Math.PI * 2);
   gameCtx.fill();
 
-  // Exhaust flame (optional flicker)
+  gameCtx.strokeStyle = "#1E90FF"; // dodger blue outline
+  gameCtx.lineWidth = 2;
+  gameCtx.stroke();
+
+  // === Exhaust Flame with Flicker & Layers ===
   if (!moonReached) {
-    const flameHeight = Math.random() * 10 + 10;
-    gameCtx.fillStyle = "#FF8C00"; // dark orange
+    const flameHeight = Math.random() * 10 + 15;
+    const flameWidth = rocket.w / 2;
+
+    // Outer flame (yellow-orange)
+    gameCtx.fillStyle = "#FFA500";
     gameCtx.beginPath();
-    gameCtx.moveTo(-rocket.w / 4, rocket.h / 2);
+    gameCtx.moveTo(-flameWidth / 2, rocket.h / 2);
     gameCtx.lineTo(0, rocket.h / 2 + flameHeight);
-    gameCtx.lineTo(rocket.w / 4, rocket.h / 2);
+    gameCtx.lineTo(flameWidth / 2, rocket.h / 2);
+    gameCtx.closePath();
+    gameCtx.fill();
+
+    // Inner flame (white core)
+    gameCtx.fillStyle = "#FFFFE0";
+    gameCtx.beginPath();
+    gameCtx.moveTo(-flameWidth / 4, rocket.h / 2);
+    gameCtx.lineTo(0, rocket.h / 2 + flameHeight / 1.5);
+    gameCtx.lineTo(flameWidth / 4, rocket.h / 2);
     gameCtx.closePath();
     gameCtx.fill();
   }
