@@ -707,7 +707,7 @@ nav .fa-solid {
       box-shadow: 0 0 25px #0ff, 0 0 10px #f0f;
     }
   
-    .arcade-sign {
+     .arcade-sign {
       position: absolute;
       top: -40px;
       left: 50%;
@@ -717,6 +717,7 @@ nav .fa-solid {
       background: #f0f;
       color: #0ff;
       font-size: 10px;
+      text-align: center; /* Center the text */
       text-shadow: 0 0 5px #fff;
       border-radius: 10px;
       box-shadow: 0 0 12px #f0f;
