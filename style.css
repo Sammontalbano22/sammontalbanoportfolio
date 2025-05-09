@@ -679,6 +679,158 @@ nav .fa-solid {
         flex-basis: 100%;
     }
 }
+* arcade */
+
+
+ @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+  
+    #arcade {
+      font-family: 'Press Start 2P', cursive;
+      background: radial-gradient(circle at top, #0ff 0%, #002 100%);
+      padding: 60px 0;
+    }
+  
+    .arcade-container {
+      position: relative;
+      width: 320px;
+      height: 500px;
+      margin: 0 auto;
+    }
+  
+    .arcade-building {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, #111, #222);
+      border: 5px solid #0ff;
+      border-radius: 12px;
+      box-shadow: 0 0 25px #0ff, 0 0 10px #f0f;
+    }
+  
+    .arcade-sign {
+      position: absolute;
+      top: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      padding: 12px;
+      background: #f0f;
+      color: #0ff;
+      font-size: 10px;
+      text-shadow: 0 0 5px #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 12px #f0f;
+    }
+  
+    .arcade-window {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background: #00f;
+      border: 2px solid #0ff;
+      box-shadow: 0 0 10px #0ff;
+    }
+  
+    .arcade-window:nth-child(2) { top: 70px; left: 30px; }
+    .arcade-window:nth-child(3) { top: 70px; right: 30px; }
+    .arcade-window:nth-child(4) { top: 150px; left: 30px; }
+    .arcade-window:nth-child(5) { top: 150px; right: 30px; }
+  
+    .arcade-door {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 70px;
+      height: 110px;
+      background: #222;
+      border: 2px solid #0ff;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: 0 0 12px #0ff;
+    }
+  
+    .door-handle {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      width: 10px;
+      height: 10px;
+      background: #ff0;
+      border-radius: 50%;
+      transform: translateY(-50%);
+    }
+  
+    .click-ui {
+      position: absolute;
+      bottom: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #0f0;
+      padding: 10px;
+      font-size: 8px;
+      color: #000;
+      border-radius: 5px;
+      box-shadow: 0 0 10px #0f0;
+      animation: flicker 1s infinite;
+    }
+  
+    @keyframes flicker {
+      0% { opacity: 1; }
+      50% { opacity: 0.5; }
+      100% { opacity: 1; }
+    }
+  
+    .person {
+      position: absolute;
+      bottom: 40px;
+      left: 40%;
+      width: 20px;
+      height: 40px;
+      display: none;
+    }
+  
+    .head {
+      width: 20px;
+      height: 20px;
+      background: #ffcc00;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  
+    .body {
+      width: 10px;
+      height: 20px;
+      background: #ffcc00;
+      position: absolute;
+      top: 20px;
+      left: 5px;
+    }
+  
+    .arm-left, .arm-right {
+      width: 5px;
+      height: 15px;
+      background: #ffcc00;
+      position: absolute;
+      top: 20px;
+    }
+  
+    .arm-left { left: -5px; }
+    .arm-right { right: -5px; }
+  
+    .leg-left, .leg-right {
+      width: 5px;
+      height: 15px;
+      background: #ffcc00;
+      position: absolute;
+      top: 40px;
+    }
+  
+    .leg-left { left: 2px; }
+    .leg-right { right: 2px; }
+  
 /* 
 #msg {
     color: #f7f4f5;
