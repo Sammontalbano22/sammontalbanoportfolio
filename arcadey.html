@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pac-Man Arcade Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="arcade-sheet.css">
+</head>
+<body>
+  <div class="pacman-cabinet">
+    <div class="marquee"><div class="marquee-text">Ready!</div></div>
+    <div class="pellet-strip"></div>
+    <div class="cabinet-body">
+
+      <!-- === Main Menu === -->
+      <div id="main-menu">
+        <h1 class="arcade-title">Arcade Main Menu</h1>
+        <div class="menu-options">
+          <button class="menu-btn" onclick="startAdventureGame()">Adventures in Aerospace</button>
+          <button class="menu-btn" onclick="startFishingGame()">Fishing for Facts</button>
+          <button class="menu-btn" onclick="startRuralGame()">Rural Roots</button>
+          <button class="menu-btn" onclick="alert('Coming Soon: Space Invaders!')">Space Invaders</button>
+          <button class="menu-btn" onclick="returnToPortfolio()">Back to Portfolio</button>
+        </div>
+      </div>
+
+      <!-- === Adventure Game Screen === -->
+      <div id="adventure-game" style="display:none;">
+        <h2 class="sub-title">Explore My Story</h2>
+        <div class="arcade-screen">
+          <canvas id="gameCanvas" width="800" height="600"></canvas>
+        </div>
+        <p style="color:#fff;text-align:center;">Use Arrow Keys or WASD to control the rocket!</p>
+        <div style="text-align:center;margin-top:10px;">
+          <button class="menu-btn" onclick="returnToMenu()">Back to Main Menu</button>
+        </div>
+      </div>
+
+      <!-- === Fishing Game Screen === -->
+      <div id="fishing-game" style="display:none;">
+        <h2 class="sub-title">Fishing for Inspiration</h2>
+        <div class="arcade-screen">
+          <canvas id="fishingCanvas" width="800" height="600"></canvas>
+        </div>
+        <p style="color:#fff;text-align:center;">Click to cast your line and see what you catch!</p>
+        <div style="text-align:center;margin-top:10px;">
+          <button class="menu-btn" onclick="returnToMenu()">Back to Main Menu</button>
+        </div>
+      </div>
+
+      <!-- === Rural Game Screen === -->
+      <div id="rural-game" style="display:none;">
+        <h2 class="sub-title">Rural Roots</h2>
+        <div class="arcade-screen">
+          <canvas id="ruralCanvas" width="800" height="600"></canvas>
+        </div>
+        <p style="color:#fff;text-align:center;">Move with WASD or Arrow Keys. Explore and interact!</p>
+        <div style="text-align:center;margin-top:10px;">
+          <button class="menu-btn" onclick="returnToPortfolio()">Back to Portfolio</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- === External Modular JS Files === -->
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
