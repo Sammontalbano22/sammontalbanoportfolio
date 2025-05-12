@@ -204,8 +204,65 @@
             <a href="https://github.com/Sammontalbano22/PythonProjects/tree/main" download class="btn">My Project Repositories</a>
         </div>
     </div>
-    <!-- Contact Section -->
-    <!-- Contact Section -->
+    <!Blog Link -->
+    <div class="blog-attractor">
+  <a href="blog.html" class="blog-cta">
+    <span class="emoji">🪄</span> Dive Into My Blog
+    <span class="tooltip">New posts about space, tech, & creativity!</span>
+  </a>
+</div>
+
+    <!--Portfolio Arcade -->
+<div id="arcade">
+    <div class="arcade-container">
+      <div class="arcade-building">
+        <div class="arcade-sign">🎮 Sam's Career Arcade 🎮</div>
+  
+        <!-- Neon Windows -->
+        <div class="arcade-window"></div>
+        <div class="arcade-window"></div>
+        <div class="arcade-window"></div>
+        <div class="arcade-window"></div>
+  
+        <!-- Glowing Door -->
+        <div class="arcade-door" onclick="enterArcade()">
+          <div class="door-handle"></div>
+        </div>
+  
+        <!-- Retro-style character -->
+        <div id="person" class="person">
+          <div class="head"></div>
+          <div class="body"></div>
+          <div class="arm-left"></div>
+          <div class="arm-right"></div>
+          <div class="leg-left"></div>
+          <div class="leg-right"></div>
+        </div>
+  
+        <!-- UI Prompt -->
+        <div class="click-ui">🕹 Click the door to enter and learn more about me!</div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    function enterArcade() {
+      const person = document.getElementById('person');
+      person.style.display = 'block';
+      let position = 40;
+      const interval = setInterval(() => {
+        if (position >= 50) {
+          clearInterval(interval);
+          window.location.href = 'arcadey.html'; // your target page
+        } else {
+          position += 1;
+          person.style.left = position + '%';
+        }
+      }, 40);
+    }
+  </script>
+  
+   <!-- Contact Section -->
     <div id="contact">
         <h1 class="sub-title">Contact Me</h1>
         <div class="contact-container">
@@ -281,56 +338,6 @@
             sidemenu.style.right = "-200px";
         }
     </script>
-<div id="arcade">
-    <div class="arcade-container">
-      <div class="arcade-building">
-        <div class="arcade-sign">🎮 Sam's Career Arcade 🎮</div>
-  
-        <!-- Neon Windows -->
-        <div class="arcade-window"></div>
-        <div class="arcade-window"></div>
-        <div class="arcade-window"></div>
-        <div class="arcade-window"></div>
-  
-        <!-- Glowing Door -->
-        <div class="arcade-door" onclick="enterArcade()">
-          <div class="door-handle"></div>
-        </div>
-  
-        <!-- Retro-style character -->
-        <div id="person" class="person">
-          <div class="head"></div>
-          <div class="body"></div>
-          <div class="arm-left"></div>
-          <div class="arm-right"></div>
-          <div class="leg-left"></div>
-          <div class="leg-right"></div>
-        </div>
-  
-        <!-- UI Prompt -->
-        <div class="click-ui">🕹 Click the door to enter and learn more about me!</div>
-      </div>
-    </div>
-  </div>
-  
-  <script>
-    function enterArcade() {
-      const person = document.getElementById('person');
-      person.style.display = 'block';
-      let position = 40;
-      const interval = setInterval(() => {
-        if (position >= 50) {
-          clearInterval(interval);
-          window.location.href = 'arcadey.html'; // your target page
-        } else {
-          position += 1;
-          person.style.left = position + '%';
-        }
-      }, 40);
-    }
-  </script>
-  
-
 
 </body>
 </html>
