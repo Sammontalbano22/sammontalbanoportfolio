@@ -1,0 +1,89 @@
+body {
+      margin: 0;
+      background: #111;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'Press Start 2P', cursive;
+    }
+    .pacman-cabinet {
+      position: relative;
+      width: 900px;
+      background: #000;
+      border: 20px solid #FFD700;
+      border-radius: 20px;
+      box-shadow: 0 0 30px #FFD700;
+      overflow: hidden;
+    }
+    .pacman-cabinet::before,
+    .pacman-cabinet::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 60px;
+      height: 100%;
+      background: url('https://i.imgur.com/gh6QZgX.png') center center / contain no-repeat;
+      opacity: 0.3;
+    }
+    .pacman-cabinet::before { left: -80px; transform: rotateY(180deg); }
+    .pacman-cabinet::after { right: -80px; }
+    .marquee {
+      background: #000;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 5px solid #FFD700;
+    }
+    .marquee-text {
+      font-size: 28px;
+      color: #605c41cc;
+      animation: blink 1s infinite;
+    }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.3} }
+    .pellet-strip {
+      height: 10px;
+      background: repeating-linear-gradient(to right, #FFD700 0 5px, transparent 5px 15px);
+    }
+    .cabinet-body {
+      padding: 20px;
+      background: #000;
+    }
+    .arcade-screen {
+      background: #000;
+      border: 5px solid #fff;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    .arcade-title, .sub-title {
+      text-align: center;
+      color: #FFD700;
+      margin: 20px 0;
+      font-size: 40px;
+    }
+    .menu-options {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .menu-btn {
+      background: #FFD700;
+      color: #000;
+      font-size: 16px;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      box-shadow: 0 5px #CCAA00;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .menu-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px #CCAA00;
+    }
+    #adventure-game, #fishing-game, #rural-game {
+      display: none;
+    }
