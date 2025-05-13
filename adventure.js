@@ -769,7 +769,7 @@ function startAdventureGame() {
   moonLandingTriggered = false;
   moonLandingDelayStarted = false;
 
-  // ✅ Launch animation, then begin gameplay
+  // ✅ Launch animation, then begin gameplay.
   playLaunchAnimation(() => {
     let transitionProgress = 0;
     const transitionDuration = 30;
