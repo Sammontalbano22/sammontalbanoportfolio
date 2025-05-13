@@ -964,3 +964,8 @@ nav .fa-solid {
   color: #ffdada;
   opacity: 0.85;
 }
+.blog-nav a.active-tag {
+  background-color: #ff004f;
+  color: white;
+  font-weight: bold;
+}
