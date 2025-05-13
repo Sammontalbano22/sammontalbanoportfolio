@@ -3,6 +3,17 @@ import { startAdventureGame,resetAdventure } from './adventure.js';
 // import { startRuralGame } from './rural.js'; // Uncomment when rural game is ready
 
 
+
+
+
+function returnToPortfolio(){
+   window.location.href = "https://sammontalbano22.github.io/sammontalbanoportfolio/"; 
+  }
+
+
+
+
+  
 function returnToMenu() {
   // Stop animations & reset state
   resetAdventure();
