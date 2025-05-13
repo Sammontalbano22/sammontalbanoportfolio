@@ -1,4 +1,4 @@
-import { startAdventureGame,resetAdventure } from './adventure.js';
+import { startAdventureGame,resetAdventure } from 'adventure.js';
 import { startFishingGame } from './fishing.js';
 // import { startRuralGame } from './rural.js'; // Uncomment when rural game is ready
 
