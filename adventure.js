@@ -1,7 +1,7 @@
   
   
   
-    // DOM References from refactoring
+    // DOM References from refactoring.
 const mainMenu = document.getElementById("main-menu");
 const fishingGame = document.getElementById("fishing-game");
 const ruralGame = document.getElementById("rural-game");
