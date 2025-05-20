@@ -554,7 +554,7 @@ function showMoonBio() {
   img.style.borderRadius = '10px';
 
   const text = document.createElement('p');
-  text.innerText ="Less than 20% of Americans can gaze at a starry night sky, untainted by city lights. However, I can. I grew up in a rural area, where nightly, the stars lit up the sky. As a kid, this inspired me to want to know everything I could about the universe. Starting in elementary school, when I built my first model rocket, I was hooked. Since then, I have built countless rockets, hoping one day I could take my skills and build a rocket that flys far beyond earth's atmosphere. This passion has inspired many of my personal projects, and even my first internship with Colorado Space Business Roundtable. Where I learned from experts at Lockheed Martin Space, BAE, United Launch Alliance, and Sierra Space.";
+  text.innerText ="Less than 20% of Americans can gaze at a starry night sky, untainted by city lights. However, I can. I grew up in a rural area, where nightly, the stars lit up the sky. As a kid, this inspired me to want to know everything I could about the universe. Starting in elementary school, when I built my first model rocket, I was hooked. Since then, I have built countless rockets, hoping one day I could take my skills and build a rocket that flies far beyond earth's atmosphere. This passion has inspired many of my personal projects, and even my first internship with Colorado Space Business Roundtable. Where I learned from experts at Lockheed Martin Space, BAE, United Launch Alliance, and Sierra Space.";
 
   const closeBtn = document.createElement('button');
   closeBtn.innerText = '✖';
