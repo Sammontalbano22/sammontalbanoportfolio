@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+]document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelectorAll(".blog-nav a");
   const blogPosts = document.querySelectorAll(".blog-post");
 
@@ -20,10 +20,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (filter === "All" || matches) {
           post.style.display = "block";
+          window.scrollTo({ top: 0, behavior: "smooth" }); // optional scroll
         } else {
           post.style.display = "none";
         }
       });
     });
+  });
+
+  // Optional: Resize iframe support
+  const observer = new ResizeObserver(() => {
+    const iframes = document.querySelectorAll("iframe");
+    iframes.forEach(iframe => {
+      iframe.style.width = "100%";
+    });
+  });
+
+  blogPosts.forEach(post => {
+    observer.observe(post);
   });
 });
